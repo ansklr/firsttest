@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 120" width="100%" height="100%">
+  <defs>
+    <!-- Металевий Золотий Градієнт -->
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#AA771C" /> <!-- Burnished Gold -->
+      <stop offset="30%" stop-color="#F1C40F" /> <!-- Bright Gold -->
+      <stop offset="70%" stop-color="#F3E5AB" /> <!-- Light Gold highlight -->
+      <stop offset="100%" stop-color="#9A690F" /> <!-- Darker Gold -->
+    </linearGradient>
+
+    <!-- Темно-зелений Градієнт -->
+    <linearGradient id="dark-green-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#052E16" /> <!-- Deepest Forest -->
+      <stop offset="50%" stop-color="#0F5132" /> <!-- Rich Dark Green -->
+      <stop offset="100%" stop-color="#064E3B" /> <!-- Jungle/Emerald -->
+    </linearGradient>
+
+    <!-- Глибокий Глянцевий Чорний Градієнт -->
+    <linearGradient id="black-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D2D2D" /> <!-- Dark Charcoal -->
+      <stop offset="40%" stop-color="#141414" /> 
+      <stop offset="100%" stop-color="#000000" /> <!-- Jet Black -->
+    </linearGradient>
+
+    <!-- Тінь для елементів -->
+    <filter id="natural-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Іконка (Синергія 3-х елементів + Hexagon-платформа) -->
+  <g transform="translate(10, 0)">
+    <!-- Шестикутна складна рамка платформи (темно-зелена + золота) -->
+    <polygon points="60,14 100,37 100,83 60,106 20,83 20,37" fill="none" stroke="url(#dark-green-grad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+             
+    <!-- Внутрішня геометрія з золотими/темно-зеленими зв'язками -->
+    <path d="M 60,14 L 60,106 M 20,37 L 100,83 M 20,83 L 100,37" stroke="url(#dark-green-grad)" stroke-width="1.5" opacity="0.3" />
+
+    <polygon points="60,20 95,40 95,80 60,100 25,80 25,40" fill="none" stroke="url(#gold-grad)" stroke-width="1" opacity="0.4" />
+
+    <!-- Лінії-зв'язки між вузлами -->
+    <path d="M 46,45 L 74,45 L 60,72 Z" fill="none" stroke="url(#dark-green-grad)" stroke-width="3" stroke-linejoin="round" />
+
+    <!-- Вузли (Nodes): -->
+    <!-- 1. Золотий Вузол (Інвестори) -->
+    <circle cx="46" cy="45" r="14.5" fill="url(#gold-grad)" filter="url(#natural-shadow)" />
+    <circle cx="46" cy="45" r="14.5" fill="none" stroke="#FFFFFF" stroke-width="0.5" opacity="0.3" />
+    
+    <!-- 2. Темно-зелений Вузол (Підприємці) -->
+    <circle cx="74" cy="45" r="14.5" fill="url(#dark-green-grad)" filter="url(#natural-shadow)" />
+    <circle cx="74" cy="45" r="14.5" fill="none" stroke="url(#gold-grad)" stroke-width="1" opacity="0.6" />
+
+    <!-- 3. Глянцевий Чорний Вузол (Коучі) -->
+    <circle cx="60" cy="72" r="14.5" fill="url(#black-grad)" filter="url(#natural-shadow)" />
+    <circle cx="60" cy="72" r="14.5" fill="none" stroke="url(#gold-grad)" stroke-width="1" opacity="0.7" />
+
+    <!-- Центральна іскра/точка перетину (Золотий блік) -->
+    <path d="M 60,49 L 61,54 L 66,55 L 61,56 L 60,61 L 59,56 L 54,55 L 59,54 Z" fill="url(#gold-grad)" />
+    <circle cx="60" cy="55" r="2.5" fill="#FFFFFF" />
+  </g>
+
+  <!-- Текстова частина -->
+  <!-- Назва Synergy (Чорна) + BOARD (Золота) -->
+  <text x="135" y="65" font-family="system-ui, -apple-system, &#39;Segoe UI&#39;, Roboto, sans-serif" font-size="38" font-weight="800" letter-spacing="-0.5">
+    <tspan fill="#141414">Synergy</tspan> <!-- Deep Jet Black -->
+    <tspan dx="10" fill="url(#gold-grad)">BOARD</tspan>
+  </text>
+
+  <!-- Підзаголовок (Темно-зелений) -->
+  <text x="136" y="88" font-family="system-ui, -apple-system, &#39;Segoe UI&#39;, Roboto, sans-serif" font-size="11.5" font-weight="700" letter-spacing="2.5" fill="#0F5132">
+    INVESTORS • ENTREPRENEURS • COACHES
+  </text>
+</svg>
